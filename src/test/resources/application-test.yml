@@ -1,0 +1,12 @@
+spring:
+
+  profiles:
+    include: default
+    active: test
+
+  data:
+    cassandra:
+      keyspaceName: essentials
+      contactPoints: localhost
+      port: 9042
+      schemaAction: CREATE_IF_NOT_EXISTS

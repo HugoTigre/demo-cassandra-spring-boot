@@ -1,0 +1,10 @@
+#
+spring-boot-cassandra-demo:
+
+  env: dev
+
+spring:
+
+  profiles:
+    include: default
+    active: dev

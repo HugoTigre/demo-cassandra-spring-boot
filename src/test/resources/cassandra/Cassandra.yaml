@@ -1,0 +1,6 @@
+
+spring:
+  data:
+    cassandra:
+      port: 9142
+      keyspace-name: essentials

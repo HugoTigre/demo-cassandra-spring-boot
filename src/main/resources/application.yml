@@ -1,0 +1,20 @@
+#
+spring-boot-cassandra-demo:
+
+  env: default
+
+  logRequests: true
+  logResponses: true
+
+  app:
+    name: Spring-Boot-Cassandra-Demo
+    version: 1.0.0
+    secret: asoifh98q34051658745q038dyhffcas
+
+spring:
+  data:
+    cassandra:
+      keyspaceName: essentials
+      contactPoints: localhost
+      port: 9042
+      schemaAction: CREATE_IF_NOT_EXISTS

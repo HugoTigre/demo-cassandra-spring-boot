@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+
+    <property name = "LOG_NAME" value = "spring-boot-cassandra-demo"/>
+
+    <conversionRule conversionWord = "coloredLevel" converterClass = "play.api.libs.logback.ColoredLevel"
+                    immediateFlush = "false"/>
+
+    <!-- STDOUT -->
+    <appender name = "STDOUT" class = "ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%date{HH:mm:ss:SSS} %highlight(%.-3level) %msg [%yellow(%class{60}.%M) %L in %magenta(%thread)] [%green(%logger{60})] %n%xException{60}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Loggers -->
+    <logger name = "ch.qos.logback" level = "WARN"/>
+    <logger name = "javax.mail" level = "INFO"/>
+    <logger name = "sun.security" level = "INFO"/>
+    <logger name = "javax.management" level = "INFO"/>
+
+    <!-- Add appender(s) to root -->
+    <root level = "info">
+        <appender-ref ref = "STDOUT"/>
+    </root>
+
+    <!-- Gracefully terminate logback when JVM terminates -->
+    <shutdownHook class = "ch.qos.logback.core.hook.DelayingShutdownHook"/>
+
+</configuration>
