@@ -1,6 +1,6 @@
 # Spring Boot with Cassandra Demo
 
-This is a simple demo application in Spring Boot with Cassandra CQL implementation.
+This is a simple demo application in Spring Boot + Kotlin with Cassandra CQL implementation.
 
 ## Post Example
 
