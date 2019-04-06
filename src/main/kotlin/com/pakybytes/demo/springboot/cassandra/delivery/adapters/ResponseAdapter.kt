@@ -20,9 +20,7 @@ class ResponseAdapter(private val jsonUtils: JsonUtils) {
             println("id = ${row.getUUID("id")}, title = ${row.getString("title")}")
         }
 
-        return transformResponse(
-                if (result != null) StatusResult(MsgStatus.OK, result.toString()) else StatusResult(MsgStatus.DAL_ERROR)
-        )
+        return transformResponse(StatusResult(MsgStatus.OK, result.toString()))
     }
 
     fun transformResponse(result: String?): ResponseEntity<String> {

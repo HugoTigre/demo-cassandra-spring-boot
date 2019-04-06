@@ -16,13 +16,13 @@ internal class BookRepoReadCQLTest(
     @Test
     fun countRaw() {
         val count = bookRepoReadCQL.countRaw()
-        assertEquals(BigInteger.ONE, count)
+        assertEquals(BigInteger.valueOf(2), count)
     }
 
     @Test
     fun queryBuilder() {
         val books = bookRepoReadCQL.queryBuilder()
-        assertEquals(listOf(Mocks.book), books)
+        assertEquals(Mocks.book, books.get(0))
     }
 
     @Test
