@@ -10,4 +10,4 @@ Notes:
 1. There are other endpoints to test just check ```BookReadCtrl``` and ```BookWriteCtrl```
 1. Cassandra implementation can be seen in ```*.data.*``` package and in ```*.ioc.CassandraConfig```
 1. Tests are available for the ```*.data.*```
-    - Important: Tests use Testcontainers which need docker installed
+    - Important: Tests use [Testcontainers](http://www.testcontainers.org) which need docker installed
